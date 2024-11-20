@@ -36,7 +36,7 @@ export default function Header({
                   style={{
                     position: "absolute",
                     top: "30px",
-                    backgroundColor: "red",
+                    backgroundColor: "#e99401",
                     color: "white",
                     borderRadius: "50%",
                     padding: "0.2em 0.7em",
