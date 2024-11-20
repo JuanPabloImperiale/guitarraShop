@@ -73,6 +73,9 @@ export const useCart = () => {
     [cart]
   );
 
+  const cartIconTotal = useMemo(  () => cart.reduce((total, item) => total + item.quantity, 0),
+  [cart]);
+
   return {
     data,
     cart,
@@ -85,5 +88,6 @@ export const useCart = () => {
     subTitle,
     isEmpty,
     cartTotal,
+    cartIconTotal
   };
 };

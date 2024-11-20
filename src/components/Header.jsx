@@ -8,6 +8,7 @@ export default function Header({
   clearCart,
   isEmpty,
   cartTotal,
+  cartIconTotal,
 }) {
   return (
     <header className="py-5 header">
@@ -20,6 +21,7 @@ export default function Header({
                 src="/img/logo.svg"
                 alt="imagen logo"
               />
+              
             </a>
           </div>
           <nav className="col-md-6 a mt-5 d-flex align-items-start justify-content-end">
@@ -29,6 +31,21 @@ export default function Header({
                 src="/img/carrito.png"
                 alt="imagen carrito"
               />
+              {cartIconTotal > 0 && (
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "30px",
+                    backgroundColor: "red",
+                    color: "white",
+                    borderRadius: "50%",
+                    padding: "0.2em 0.7em",
+                    fontSize: "0.8em",
+                  }}
+                >
+                  {cartIconTotal}
+                </span>
+              )}
 
               <div id="carrito" className="bg-white p-3">
                 {isEmpty ? (

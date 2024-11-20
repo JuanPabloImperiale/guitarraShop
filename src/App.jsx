@@ -14,7 +14,8 @@ function App() {
     title,
     subTitle,
     isEmpty,
-    cartTotal
+    cartTotal,
+    cartIconTotal
   } = useCart();
 
   return (
@@ -27,6 +28,7 @@ function App() {
         clearCart={clearCart}
         isEmpty ={ isEmpty}
         cartTotal = {cartTotal}
+        cartIconTotal = {cartIconTotal}
       />
       <main className="container-xl mt-5">
         <h2 className="text-center"> {title} </h2>
